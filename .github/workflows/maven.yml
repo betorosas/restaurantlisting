@@ -69,7 +69,7 @@ jobs:
       working-directory: gitOps
       run: |
         # File to edit in Repo B:
-        FILE="restaurant-manifest.yml"
+        FILE="k8s/restaurant-manifest.yml"
         # Image repo/name (no tag) — adjust to yours:
         IMAGE_NAME="${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}"
         # New tag:
