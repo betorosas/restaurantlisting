@@ -16,7 +16,13 @@
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
-		<sonar.exclusions>**/com/codeddecode/restaurantlisting/dto/** , **/*/com/codeddecode/restaurantlisting/entity/**/*</sonar.exclusions>
+		
+  		<sonar.exclusions>**/generated/**,**/*Config.java</sonar.exclusions>
+  		<sonar.coverage.exclusions>**/dto/**,**/entity/**,**/config/**</sonar.coverage.exclusions>		
+		<sonar.organization>betorosas</sonar.organization>
+  		<sonar.projectKey>betorosas_restaurantlisting</sonar.projectKey>
+  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  		<sonar.coverage.jacoco.xmlReportPaths>${project.reporting.outputDirectory}/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>		
 	</properties>
 	<dependencies>
 		<dependency>
@@ -111,6 +117,11 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+			  <groupId>org.sonarsource.scanner.maven</groupId>
+			  <artifactId>sonar-maven-plugin</artifactId>
+			  <version>3.10.0.2594</version>
+			</plugin>			
 		</plugins>
 	</build>
 </project>
