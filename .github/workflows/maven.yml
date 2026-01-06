@@ -55,5 +55,7 @@ jobs:
       with:
         context: .
         push: ${{ github.event_name != 'pull_request' }}
-        tags: ${{ steps.meta.outputs.tags }}
+        tags: |
+          type=sha,format=short,prefix=sha-
+          type=semver,pattern={{version}}     
         labels: ${{ steps.meta.outputs.labels }}
