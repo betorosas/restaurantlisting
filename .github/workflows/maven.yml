@@ -63,6 +63,6 @@ jobs:
       with:
         repository: betorosas/gitOps
         token: ${{ secrets.TOKEN }}
-        path: /
+        path: gitOps
         ref: main
         
