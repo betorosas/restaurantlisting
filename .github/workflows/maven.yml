@@ -22,7 +22,7 @@ env:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest ${{ github.run_number }}
     steps:
     - name: Checkout source code
       uses: actions/checkout@v4
