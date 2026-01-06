@@ -21,7 +21,7 @@ import static org.mockito.Mockito.*;
 
 public class RestaurantServiceTest {
 
-    @Mock
+    @Mock 
     RestaurantRepo restaurantRepo;
 
     @InjectMocks
