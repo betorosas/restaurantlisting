@@ -71,7 +71,7 @@ jobs:
         # File to edit in Repo B:
         FILE="restaurant-manifest.yml"
         # Image repo/name (no tag) — adjust to yours:
-        IMAGE_NAME= ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}
+        IMAGE_NAME= "${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}"
         # New tag:
         NEW_TAG=":${{ env.VERSION }}"
         
