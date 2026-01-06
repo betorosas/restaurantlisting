@@ -58,3 +58,11 @@ jobs:
         push: ${{ github.event_name != 'pull_request' }}
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }}
         labels: ${{ steps.meta.outputs.labels }}
+    - name: Checkout manifest repo gitOps
+      uses: actions/checkout@v4
+      with:
+        repository: betorosas/gitOps
+        token: ${{ secrets.TOKEN }}
+        path: /
+        ref: main
+        
