@@ -17,8 +17,6 @@ public class RestaurantController {
     @Autowired
     RestaurantService restaurantService;
 
-
-    
     @GetMapping("/fetchAllRestaurants")
     public ResponseEntity<List<RestaurantDTO>> fetchAllRestaurants(){
         List<RestaurantDTO> allRestaurants = restaurantService.findAllRestaurants();
@@ -35,8 +33,6 @@ public class RestaurantController {
     public ResponseEntity<RestaurantDTO> findRestaurantById(@PathVariable Integer id) {
        return restaurantService.fetchRestaurantById(id);
     }
-
-
 
 
 }
